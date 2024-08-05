@@ -431,7 +431,7 @@ export class Api {
         }
       );
     },
-    async GetSC(params: DEROGetSC, waitAfterNewBlock?: true) {
+    async GetSC(params: DEROGetSC, waitAfterNewBlock?: boolean) {
       if (waitAfterNewBlock) {
         debug("waiting for new block");
         this._api.subscribe({ event: "new_topoheight" }, "auto");
