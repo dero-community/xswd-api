@@ -91,7 +91,7 @@ export type EventResponse = {
 type Network = "Simulator" | "Testnet" | "Mainnet";
 type Status = { status: "OK" };
 
-type DEROGetInfoResult = {
+export type DEROGetInfoResult = {
   alt_blocks_count: Uint64;
   difficulty: Uint64;
   grey_peerlist_size: number;
@@ -126,7 +126,7 @@ type DEROGetInfoResult = {
   hashrate_7d: number;
 } & Status;
 
-type DEROGetBlockResult = {
+export type DEROGetBlockResult = {
   blob: string;
   json: string;
   block_header: {
@@ -149,7 +149,7 @@ type DEROGetBlockResult = {
   };
 } & Status;
 
-type DEROGetBlockHeaderResult = {
+export type DEROGetBlockHeaderResult = {
   block_header: {
     depth: Uint64;
     difficulty: string;
@@ -170,27 +170,27 @@ type DEROGetBlockHeaderResult = {
   };
 } & Status;
 
-type DEROGetTxPoolResult = {} & Status;
+export type DEROGetTxPoolResult = {} & Status;
 
-type DEROGetTransactionResult = {
+export type DEROGetTransactionResult = {
   txs_as_hex: null;
   txs: null;
 } & Status;
 
-type DEROGetHeightResult = {
+export type DEROGetHeightResult = {
   height: Uint64;
   stableheight: Uint64;
   topoheight: Uint64;
 } & Status;
 
-type DEROGetBlockCountResult = { count: Uint64 } & Status;
+export type DEROGetBlockCountResult = { count: Uint64 } & Status;
 
-type DERONameToAddressResult = {
+export type DERONameToAddressResult = {
   name: string;
   address: string;
 } & Status;
 
-type GetBalanceResult = { balance: Uint64; unlocked_balance: Uint64 };
+export type GetBalanceResult = { balance: Uint64; unlocked_balance: Uint64 };
 
 export type Entry = {
   height: Uint64;
